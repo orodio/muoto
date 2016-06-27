@@ -1,0 +1,22 @@
+{
+  "name": "muoto",
+  "version": "0.0.0",
+  "description": "Declarative Shape Invariants",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/orodio/muoto"
+  },
+  "keywords": [
+    "assertion",
+    "invariant"
+  ],
+  "author": "orodio",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.15.2"
+  }
+}
