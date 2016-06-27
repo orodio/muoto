@@ -36,6 +36,7 @@ valid([
   shape(shape.number)(1),
   shape({ foo:shape.number })({ foo:1 }),
   shape([ shape.number ])([1, 2, 3, 4, 5]),
+
 ])
 
 invalid([
@@ -56,4 +57,6 @@ invalid([
   shape(shape.string)({ foo:"bar" }),
   shape(shape.string)({}),
   shape(shape.string)([]),
+
+  shape({ foo:1, bar:shape.number, baz:shape.string, fuzz:shape.bool })({}),
 ])
