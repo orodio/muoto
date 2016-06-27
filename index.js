@@ -87,7 +87,13 @@ function shape (shp, opts) {
     msg:      message,
     blocking: false,
     logging:  false,
+    bypass:   false,
   }, opts)
+
+
+  if (opts.bypass) return function () {
+    return opts.Just("bypass", "bypass")
+  }
 
   function result (fn) {
     try {

@@ -11,8 +11,6 @@ $ npm intall --save muoto
 ```javascript
 import { shape } from "muoto"
 
-var bypass = false
-
 function bob (thing) {
   if (!shape({
     foo:  1,
@@ -65,4 +63,6 @@ shape(shape.number, { logging: true })("b") // logs an error message
 var shp = shape({ foo:[{ bar:1 }] })({ foo:[{ bar:1 }, { bar:1 }, { bar:2 }, { bar:1 }] })
 shp.valid  // false
 shp.cursor // foo[2].bar
+
+shape(shape.number, { bypass:true })("a").valid // true - wont execute any of the traversals (prod mode maybe)
 ```
